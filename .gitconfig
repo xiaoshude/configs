@@ -1,23 +1,15 @@
 [user]
-    name  = zhenkunou
-    email = ryan.ouzhenkun@gmail.com
-[push]
-    default = simple
-[color]
-    ui = always
-[color "status"]
-    added     = green
-    changed   = red
-    untracked = magenta
-[color "diff"]
-    meta = yellow bold
-    frag = magenta
-    old  = red
-    new  = green
-[color "branch"]
-    current = green
-    local   = yellow
-    remote  = cyan
+	name = zhiyuan.fu
+	email = zhiyuan.fu@wshopee.com
+[core]
+	excludesfile = /Users/fjywan/.gitignore_global
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [alias]
     s   = status
     ss  = status -s -b
@@ -31,10 +23,5 @@
     ls  = log --format='%C(auto)%h%Creset%C(auto)%d%Creset %s %C(dim bold cyan)<%an>%Creset %C(dim)%cr%Creset' --graph
     ll  = log --graph --decorate
     w   = show
-[filter "media"]
-    clean = git-media-clean %f
-    smudge = git-media-smudge %f
-[core]
-    excludesfile = ~/.gitignore
-[github]
-    user = zhenkunou
+	co = checkout
+	sh = stash
